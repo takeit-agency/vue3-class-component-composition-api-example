@@ -23,11 +23,26 @@
           v-for="(artist, index) in artists.state.list"
           :key="index"
         >
-          <img :src="artist.imageUrl" :alt="artist.name" class="artist__image" />
+          <img
+            :src="artist.imageUrl"
+            :alt="artist.name"
+            class="artist__image"
+          />
           <strong class="artist__name">{{ artist.name }}</strong>
         </div>
       </div>
     </div>
+
+    <footer class="footer">
+      <span>Made by:</span>
+      <a
+        href="https://takeit.agency/en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img class="footer__logo" src="/logo.png" alt="take it agency" />
+      </a>
+    </footer>
   </div>
 </template>
 
@@ -84,5 +99,16 @@ export default class App extends Vue {
 
 .artist__name {
   margin-right: 8px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo {
+  width: 100px;
 }
 </style>
